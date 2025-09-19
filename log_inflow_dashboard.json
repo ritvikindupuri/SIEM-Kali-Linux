@@ -1,0 +1,28 @@
+# This file is a conceptual example of how your "Logs Inflow" visualization can be defined as code. Real-world SIEM deployments use this "dashboard as code" approach for version control and easy deployment.
+
+{
+  "attributes": {
+    "title": "Log Inflow Over Time",
+    "description": "Dashboard to visualize log ingestion rates.",
+    "panelsJSON": "[{\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":24,\"i\":\"1\"},\"version\":\"8.0.0\",\"panelRefName\":\"panel_0\"}]",
+    "optionsJSON": "{\"useMargins\":true}",
+    "references": [
+      {
+        "id": "visualization-log-count",
+        "name": "panel_0",
+        "type": "visualization"
+      }
+    ]
+  },
+  "references": [
+    {
+      "id": "visualization-log-count",
+      "type": "visualization",
+      "attributes": {
+        "title": "Logs inflow",
+        "visState": "{\"type\":\"timelion\",\"params\":{\"expression\":\".es(*)\",\"interval\":\"auto\"},\"aggs\":[]}",
+        "uiStateJSON": "{}"
+      }
+    }
+  ]
+}
