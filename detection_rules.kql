@@ -1,0 +1,6 @@
+// Custom Detection Rule for Nmap Port Scanning
+// This rule is designed to trigger when the Elastic Agent detects
+// an event action specifically tagged as "nmap_scanning".
+// It is a simple but effective way to catch basic recon activity.
+
+event.action:"nmap_scanning"
